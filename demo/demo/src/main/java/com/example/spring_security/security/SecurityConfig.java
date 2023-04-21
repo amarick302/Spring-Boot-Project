@@ -48,6 +48,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests()
                 .requestMatchers("/v1/user/**")
                 .permitAll()
+                .requestMatchers("/authenticate")
+                .permitAll()
                 .requestMatchers("/")
                 .authenticated()
                 .and()
